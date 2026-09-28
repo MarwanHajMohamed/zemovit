@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <link rel="shortcut icon" href="img/fav.svg" type="image/x-icon"/>
+    <title>Zemovit</title>
+    <!-- fontawesome -->
+    <link rel="stylesheet" href="css/fontawesome.min.css"/>
+    <!-- custom -->
+    <link rel="stylesheet" href="css/style.css?=v6"/>
+    <!-- Swiper CSS -->
+    <link
+        rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+</head>
+
+<body>
+<div class="preLoader">
+    <!-- preLoaderImage -->
+    <figure class="Loading"></figure>
+</div>
+<!-- header -->
+<header>
+    <div class="container">
+        <nav class="d-flex items-center justify-between py-10  px-9">
+            <!-- logo -->
+            <a href="#" class="w-80 ps-10">
+                <img src="img/logo.svg" alt="logo"/>
+            </a>
+            <!-- list -->
+            <ul
+                class="list d-flex lg:items-center border-none lg:relative m-0 gap-14 lg-max:flex-col lg-max:pt-14 lg-max:w-140 lg-max:max-w-full lg-max:h-screen"
+                id="mobileList"
+                popover=""
+            >
+                <!-- close Menu -->
+                <button
+                    type="button"
+                    class="btn btn-rounded btn-icon lg:d-none mx-6"
+                    popovertarget="mobileList"
+                    popovertargetaction="hide"
+                    id="closeMenu"
+                >
+                    <i class="fa-light fa-xmark"></i>
+                </button>
+                <!--  -->
+                <li><a href="index.html#Hero">Home</a></li>
+                <li>
+                    <a href="about.html">About Us</a>
+                </li>
+                <li>
+                    <a href="index.html#Therapeutic">Therapeutic area</a>
+                </li>
+
+                <li>
+                    <a href="products.html">All Products</a>
+                </li>
+                <li><a href="contactus.html">faq/Contact Us</a></li>
+                <!-- <li class="lg:d-none">
+                  <button class="btn btn-rounded">
+                    <a href="index.html#contact">Contact Us</a>
+                  </button>
+                </li> -->
+            </ul>
+            <!-- open menu -->
+            <menu class="d-flex items-center gap-8">
+                <!-- <li class="lg-max:d-none">
+                   <button class="btn btn-rounded">
+                     <a href="index.html#contact">Contact Us</a>
+                   </button>
+                 </li> -->
+                <li class="lg:d-none">
+                    <button
+                        class="btn btn-rounded isBorder btn-icon"
+                        popovertarget="mobileList"
+                        popovertargetaction="show"
+                        id="openMenu"
+                    >
+                        <i class="fa-regular fa-bars"></i>
+                    </button>
+                </li>
+            </menu>
+        </nav>
+    </div>
+</header>
+<!-- ===================================
+ ==================start page content========================
+ ============================================================ -->
+<main>
+    <!-- Contact us  -->
+    <section class="Contact" id="Contact">
+        <div class="mainHeading center">
+            <span class="subTitle fadeIn">Contact us</span>
+            <h2 class="split-text">
+                Let’s Talk
+                <span class="MainColor">Goals</span>
+            </h2>
+        </div>
+        <div
+            class="container h-full d-grid lg:grid-col-2 grid-col-1 gap-8 items-center"
+        >
+            <form class="d-flex flex-col gap-10">
+                <div class="formGroup fadeIn">
+                    <label for="name" class="capitalize d-inline-block pb-4"
+                    >full name</label
+                    >
+                    <input
+                        type="text"
+                        id="name"
+                        name="name"
+                        class="p-8 w-full max-w-full round-8 h-30"
+                        placeholder="ex: Ahmed Mohamed"
+                    />
+                </div>
+                <div class="formGroup fadeIn">
+                    <label for="email" class="capitalize d-inline-block pb-4"
+                    >email</label
+                    >
+                    <input
+                        type="email"
+                        id="email"
+                        name="email"
+                        class="p-8 w-full max-w-full round-8 h-30"
+                        placeholder="ex:mail@mail.com"
+                    />
+                </div>
+                <div class="formGroup fadeIn">
+                    <label for="phone" class="capitalize d-inline-block pb-4"
+                    >phone</label
+                    >
+                    <input
+                        type="number"
+                        id="phone"
+                        name="phone"
+                        class="p-8 w-full max-w-full round-8 h-30"
+                        placeholder="phone number"
+                    />
+                </div>
+                <div class="formGroup fadeIn">
+                    <label for="message" class="capitalize d-inline-block pb-4"
+                    >message</label
+                    >
+                    <textarea
+                        name="message"
+                        id="message"
+                        class="p-8 w-full max-w-full round-8 h-100"
+                        placeholder="write here"
+                    ></textarea>
+                </div>
+                <button class="btn btn-rounded w-1/4 mx-auto text-white">
+                    <span>Send</span>
+                </button>
+            </form>
+            <div class="location w-full h-full fadeIn">
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7073.204161807379!2d-0.031935668845769545!3d51.5693321119324!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47d8a00baf21de75%3A0x52963a5addd52a99!2z2YTZhtiv2YbYjCDYp9mE2YXZhdmE2YPYqSDYp9mE2YXYqtit2K_YqQ!5e0!3m2!1sar!2seg!4v1751370425361!5m2!1sar!2seg"
+                    style="border: 0"
+                    allowfullscreen="true"
+                    loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade"
+                ></iframe>
+            </div>
+        </div>
+    </section>
+
+    <!-- faq -->
+    <section class="faq" id="faq">
+        <div class="container">
+            <div class="mainHeading center">
+                <span class="subTitle fadeIn">Faq</span>
+                <h2 class="split-text">
+                    Got <span class="MainColor">Questions</span>? We've Got
+                    <span class="MainColor">Answers</span>
+                </h2>
+            </div>
+
+            <div class="faq-list" data-aos="fade-up">
+                <div class="faq-item active fadeIn">
+                    <h3 class="faq-question">
+                        Are your products licensed by health authorities?
+                    </h3>
+                    <p class="faq-answer">
+                        Yes, all our products are certified by local and international
+                        drug control bodies, and we adhere to the highest standards of
+                        quality and safety.
+                    </p>
+                </div>
+                <div class="faq-item fadeIn">
+                    <h3 class="faq-question">
+                        What is the difference between medications and supplements?
+                    </h3>
+                    <p class="faq-answer">
+                        Medications are used to treat specific medical conditions and
+                        sometimes require a prescription, while supplements support
+                        overall health and are not used for direct treatment.
+                    </p>
+                </div>
+                <div class="faq-item fadeIn">
+                    <h3 class="faq-question">When will I start seeing results?</h3>
+                    <p class="faq-answer">
+                        Results vary depending on your body, goals, and consistency.
+                        However, most users notice improvements within 2 to 4 weeks of
+                        regular use.
+                    </p>
+                </div>
+                <div class="faq-item fadeIn">
+                    <h3 class="faq-question">
+                        Can supplements be used with medications at the same time?
+                    </h3>
+                    <p class="faq-answer">
+                        In most cases, yes, but it is best to consult a doctor or
+                        pharmacist to avoid any possible drug interactions.
+                    </p>
+                </div>
+                <div class="faq-item fadeIn">
+                    <h3 class="faq-question">
+                        How can I be sure that the product is genuine?
+                    </h3>
+                    <p class="faq-answer">
+                        Each product has an operational number and verification code
+                        that can be tracked on our official website to ensure
+                        authenticity.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+</main>
+<!-- ===================================
+ ==================end page content========================
+ ============================================================ -->
+<!-- footer -->
+<footer>
+    <div class="container d-grid lg:grid-col-3 md:grid-col-2 grid-col-1">
+        <div class="footerMeta">
+            <figure class="w-140">
+                <img src="img/logoW.svg?=v3" alt="الشعار" loading="lazy"/>
+            </figure>
+            <p class="line-relaxed my-9">
+                Clean. Effective. Backed by experts. Fuel your body with confidence.
+            </p>
+            <menu class="socialLinks d-flex align-items-center gap-7 flex-wrap">
+                <li>
+                    <button type="button" class="btn btn-rounded">
+                        <a href="#!">
+                            <i class="fa-brands fa-facebook-f"></i>
+                        </a>
+                    </button>
+                </li>
+                <li>
+                    <button type="button" class="btn btn-rounded">
+                        <a href="#!">
+                            <i class="fa-brands fa-twitter"></i>
+                        </a>
+                    </button>
+                </li>
+                <li>
+                    <button type="button" class="btn btn-rounded">
+                        <a href="#!">
+                            <i class="fa-brands fa-instagram"></i>
+                        </a>
+                    </button>
+                </li>
+                <li>
+                    <button type="button" class="btn btn-rounded">
+                        <a href="#!">
+                            <i class="fa-brands fa-tiktok"></i>
+                        </a>
+                    </button>
+                </li>
+            </menu>
+        </div>
+        <div class="footerLinks">
+            <h3>Quick Links</h3>
+            <ul class="d-flex flex-col gap-10">
+                <li><a href="index.html#hero">Home</a></li>
+                <li><a href="index.html#about">About us </a></li>
+                <li><a href="index.html#features">Why Zemovit</a></li>
+                <li><a href="index.html#faq"> faq </a></li>
+            </ul>
+        </div>
+        <div class="footerLinks">
+            <h3>Contact Us</h3>
+            <ul class="d-flex flex-col gap-10">
+                <li>
+                    <a
+                        href="mailto:info@physio.com"
+                        class="d-flex align-items-center gap-3"
+                    >
+                        <i class="fa-light fa-envelope"></i>
+                        info@physio.com
+                    </a>
+                </li>
+                <li>
+                    <a
+                        href="tel:+966500000000"
+                        class="d-flex align-items-center gap-3"
+                    >
+                        <i class="fa-light fa-phone"></i>
+                        +966 50 000 0000
+                    </a>
+                </li>
+                <li>
+                    <a
+                        href="tel:+966500000001"
+                        class="d-flex align-items-center gap-3"
+                    >
+                        <i class="fa-light fa-phone"></i>
+                        +966 50 000 0001
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="copyRight border-t-1 border-t-solid">
+        <p>All Rights Reserved © 2025 Zemovit</p>
+    </div>
+</footer>
+
+<!-- (((((((((script))))))))) -->
+<!--=======GSAP CDN=======-->
+<script
+    type="text/javascript"
+    src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"
+></script>
+<!--=======ScrollTrigger CDN=======-->
+<script
+    type="text/javascript"
+    src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"
+></script>
+<!-- SplitText -->
+<script src="js/SplitText.min.js"></script>
+<!-- lenis -->
+<script src="https://cdn.jsdelivr.net/npm/@studio-freight/lenis@latest/dist/lenis.min.js"></script>
+<!-- custom -->
+<script src="js/main.js?=v3"></script>
+<!-- Swiper JS -->
+<script></script>
+</body>
+</html>

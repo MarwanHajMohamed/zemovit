@@ -1,0 +1,516 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="img/fav.svg" type="image/x-icon" />
+    <title>Zemovit</title>
+    <!-- fontawesome -->
+    <link rel="stylesheet" href="css/fontawesome.min.css" />
+    <!-- custom -->
+    <link rel="stylesheet" href="css/style.css?=v6" />
+    <!-- Swiper CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+  </head>
+
+  <body>
+    <div class="preLoader">
+      <!-- preLoaderImage -->
+      <figure class="Loading"></figure>
+    </div>
+    <!-- header -->
+    <header>
+      <div class="container">
+        <nav class="d-flex items-center justify-between py-10 px-9">
+          <!-- logo -->
+          <a href="#" class="w-80 ps-10">
+            <img src="img/logo.svg" alt="logo" />
+          </a>
+          <!-- list -->
+          <ul
+            class="list d-flex lg:items-center border-none lg:relative m-0 gap-14 lg-max:flex-col lg-max:pt-14 lg-max:w-140 lg-max:max-w-full lg-max:h-screen"
+            id="mobileList"
+            popover=""
+          >
+            <!-- close Menu -->
+            <button
+              type="button"
+              class="btn btn-rounded btn-icon lg:d-none mx-6"
+              popovertarget="mobileList"
+              popovertargetaction="hide"
+              id="closeMenu"
+            >
+              <i class="fa-light fa-xmark"></i>
+            </button>
+            <!--  -->
+            <li><a href="index.html#Hero">Home</a></li>
+            <li>
+              <a href="about.html">About Us</a>
+            </li>
+            <li>
+              <a href="index.html#Therapeutic">Therapeutic area</a>
+            </li>
+            <li>
+              <a href="products.html">All Products</a>
+            </li>
+            <li><a href="contactus.html">faq/Contact Us</a></li>
+            <!-- <li class="lg:d-none">
+              <button class="btn btn-rounded">
+                <a href="index.html#contact">Contact Us</a>
+              </button>
+            </li> -->
+          </ul>
+          <!-- open menu -->
+          <menu class="d-flex items-center gap-8">
+            <!-- <li class="lg-max:d-none">
+              <button class="btn btn-rounded">
+                <a href="index.html#contact">Contact Us</a>
+              </button>
+            </li> -->
+            <li class="lg:d-none">
+              <button
+                class="btn btn-rounded isBorder btn-icon"
+                popovertarget="mobileList"
+                popovertargetaction="show"
+                id="openMenu"
+              >
+                <i class="fa-regular fa-bars"></i>
+              </button>
+            </li>
+          </menu>
+        </nav>
+      </div>
+    </header>
+    <!-- ===================================
+     ==================start page content========================
+     ============================================================ -->
+    <main>
+      <!-- hero -->
+      <section class="hero" id="Hero">
+        <div class="container h-full align-center">
+          <div
+            class="heroContent w-8/10 max-w-full lg-max:w-full mx-auto text-center"
+          >
+            <h1 class="fs-60 split-text md-max:fs-36">
+              Complete Medical Solutions for a Healthier Life
+            </h1>
+            <p class="fs-16 line-relaxed py-8 split-lines">
+              At our company, we believe that prevention and healing begin with
+              quality pharmaceuticals. We offer a wide selection of certified
+              medications and nutritional supplements designed to support a
+              healthy lifestyle. Our focus is on delivering effective, safe, and
+              innovative healthcare products that meet your everyday medical
+              needs. Invest in your well-being today for a better tomorrow.
+            </p>
+            <button class="btn btn-rounded mainColor">
+              <a href="index.html#contact">Ready to level up</a>
+            </button>
+          </div>
+        </div>
+      </section>
+      <!-- About Us -->
+      <section class="about" id="About">
+        <div class="container h-full">
+          <!-- about compony -->
+          <div
+            class="d-grid grid-col-1 lg:grid-col-2 h-full gap-14 items-center mb-14"
+          >
+            <div class="aboutContent lg-max:row-s-2 lg-max:row-e-2">
+              <div class="mainHeading smallGap">
+                <span class="subTitle fadeIn">About Us</span>
+                <h2 class="split-text">
+                  Who are <span class="MainColor">Zemovit</span>
+                </h2>
+              </div>
+              <p class="aboutOverview line-relaxed split-lines">
+                Zemovit was founded in London by a team with pharmaceutical
+                backgrounds and one shared belief: better health should be
+                available to everyone. We serve both the public and clinical
+                environments, combining rigorous scientific standards with a
+                commitment to wellness that’s real, honest, and forward-looking.
+                Every Zemovit formula is built from proven, well-studied
+                ingredients. And this is only the beginning. Our upcoming range
+                includes targeted blends based on the latest clinical
+                research—designed to fill the gaps the industry continues to
+                overlook. We’re not here to follow what works. We’re here to
+                improve it. For people. For practitioners. For the future of
+                preventative health.
+              </p>
+            </div>
+            <figure class="h-full relative imgDownUp">
+              <img src="img/a.jpg" class="img-cover" alt="about" />
+            </figure>
+          </div>
+
+        
+        </div>
+      </section>
+
+      
+
+      <!-- Therapeutic -->
+      <section class="Therapeutic" id="Therapeutic">
+        <div class="mainHeading center">
+          <span class="subTitle fadeIn">Explore </span>
+          <h2 class="split-text">
+            Therapeutic <span class="MainColor">Area</span>
+          </h2>
+        </div>
+        <div class="container">
+          <div class="grid">
+            <!-- Card 1 -->
+            <div class="benefit-card fadeIn">
+              <div class="card-icon">
+                <img src="img/icon1.svg" alt="Energy Icon" />
+              </div>
+              <h3>ENERGY & METABOLISM</h3>
+              <p>
+                Enhance physical and mental energy, support metabolic function,
+                and reduce fatigue with bioavailable nutrients.
+              </p>
+            </div>
+
+            <!-- Card 2 -->
+            <div class="benefit-card fadeIn">
+              <div class="card-icon">
+                <img src="img/icon2.svg" alt="Sun Icon" />
+              </div>
+              <h3>DAILY ESSENTIALS</h3>
+              <p>
+                Core vitamins and minerals for foundational wellness — designed
+                for everyday balance, clarity, and vitality.
+              </p>
+            </div>
+
+            <!-- Card 3 -->
+            <div class="benefit-card fadeIn">
+              <div class="card-icon">
+                <img src="img/icon3.svg" alt="Pregnancy Icon" />
+              </div>
+              <h3>PREGNANCY & FERTILITY</h3>
+              <p>
+                Targeted nutrients to support prenatal development, maternal
+                health, and fertility — from conception to care.
+              </p>
+            </div>
+
+            <!-- Card 4 -->
+            <div class="benefit-card fadeIn">
+              <div class="card-icon">
+                <img src="img/icon4.svg" alt="Child Icon" />
+              </div>
+              <h3>CHILD & ADOLESCENCE WELLNESS</h3>
+              <p>
+                Support healthy growth, development, and immunity — with gentle,
+                purposeful formulations designed for younger bodies.
+              </p>
+            </div>
+
+            <!-- Card 5 -->
+            <div class="benefit-card fadeIn">
+              <div class="card-icon">
+                <img src="img/icon5.svg" alt="Bone Icon" />
+              </div>
+              <h3>BONE & JOINT</h3>
+              <p>
+                Support strong bones, flexible joints, and long-term skeletal
+                resilience with essential minerals and co-factors.
+              </p>
+            </div>
+
+            <!-- Card 6 -->
+            <div class="benefit-card fadeIn">
+              <div class="card-icon">
+                <img src="img/icon6.svg" alt="Shield Icon" />
+              </div>
+              <h3>IMMUNITY SUPPORT</h3>
+              <p>
+                Defend your health daily with ingredients clinically shown to
+                strengthen immune function and cellular response.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- products -->
+      <section class="products-section" id="products">
+        <div class="container">
+          <div class="mainHeading center">
+            <span class="subTitle fadeIn">Products</span>
+            <h2 class="split-text">
+              Featured <span class="MainColor">Products</span>
+            </h2>
+          </div>
+          <div class="swiper-wrapper-container">
+            <div class="swiper productSwiper">
+              <div class="swiper-button-prev"></div>
+
+              <div class="swiper-wrapper">
+                <div
+                  class="swiper-slide"
+                  data-title="Calcium carbonate +vitamin D"
+                >
+                  <img src="img/p1.jpeg" alt="Product 1" />
+                </div>
+                <div class="swiper-slide" data-title="Calcium carbonate">
+                  <img src="img/p2.jpeg" alt="Product 2" />
+                </div>
+                <div class="swiper-slide" data-title="Magnesium citrate">
+                  <img src="img/p3.jpeg" alt="Product 3" />
+                </div>
+                <div class="swiper-slide" data-title="Calcium Lactate">
+                  <img src="img/p4.jpeg" alt="Product 4" />
+                </div>
+                <div class="swiper-slide" data-title="Zinc sulphate">
+                  <img src="img/p5.jpeg" alt="Product 5" />
+                </div>
+                <div class="swiper-slide" data-title="Vitamine D3">
+                  <img src="img/p6.jpg" alt="Product 6" />
+                </div>
+                <div class="swiper-slide" data-title="Vitamine D3">
+                  <img src="img/p7.jpg" alt="Product 7" />
+                </div>
+                <div class="swiper-slide" data-title="Zinc sulphate">
+                  <img src="img/p8.jpg" alt="Product 8" />
+                </div>
+              </div>
+              <div class="swiper-button-next"></div>
+            </div>
+          </div>
+          <!-- Caption -->
+          <div class="slider-caption center" id="sliderCaption">
+            Calcium carbonate +vitamin D
+          </div>
+        </div>
+      </section>
+
+     
+<!-- why -->
+      <section class="why" id="Why">
+        <div class="mainHeading center">
+          <span class="subTitle fadeIn">Why </span>
+          <h2 class="split-text">
+            Why Choose <span class="MainColor">Zemovit</span>
+          </h2>
+        </div>
+        <div
+          class="container d-grid lg:grid-col-3 grid-col-1 h-full gap-8 items-center"
+        >
+          <div class="whyItems">
+            <div class="item fadeIn p-10 px-12">
+              <h3>Scientifically Backed Formulas</h3>
+              <p class="split-lines">
+                Every supplement we offer is developed with input from certified
+                nutritionists and backed by real clinical research to ensure
+                safety and results.
+              </p>
+            </div>
+            <div class="item fadeIn p-10 px-12">
+              <h3>Clean & Natural Ingredients</h3>
+              <p class="split-lines">
+                We use only high-quality, non-GMO, and additive-free ingredients
+                to give your body the pure fuel it deserves — no fillers, no
+                fakes.
+              </p>
+            </div>
+            <div class="item fadeIn p-10 px-12">
+              <h3>Third-Party Tested for Purity</h3>
+              <p class="split-lines">
+                Our products go through rigorous independent lab testing to
+                ensure you're getting exactly what’s on the label — and nothing
+                you don’t want.
+              </p>
+            </div>
+          </div>
+          <figure class="imgDownUp">
+            <img src="img/whyus.png" class="img-cover" alt="why" />
+          </figure>
+          <div class="whyItems">
+            <div class="item fadeIn p-10 px-12">
+              <h3>Tailored for Real Results</h3>
+              <p class="split-lines">
+                Whether your goal is to gain muscle, boost energy, enhance
+                focus, or support immunity — we have a product designed to help
+                you get there.
+              </p>
+            </div>
+            <div class="item fadeIn p-10 px-12">
+              <h3>Fast & Reliable Delivery</h3>
+              <p class="split-lines">
+                We process your orders quickly and offer reliable shipping
+                options to ensure your supplements reach you on time, every
+                time.
+              </p>
+            </div>
+            <div class="item fadeIn p-10 px-12">
+              <h3>Dedicated Support Team</h3>
+              <p class="split-lines">
+                Our experts are always ready to answer your questions, offer
+                guidance, and help you make informed choices for your health.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+      
+      <!--  -->
+    </main>
+    <!-- ===================================
+     ==================end page content========================
+     ============================================================ -->
+    <!-- footer -->
+    <footer>
+      <div class="container d-grid lg:grid-col-3 md:grid-col-2 grid-col-1">
+        <div class="footerMeta">
+          <figure class="w-140">
+            <img src="img/logoW.svg?=v3" alt="الشعار" loading="lazy" />
+          </figure>
+          <p class="line-relaxed my-9">
+            Clean. Effective. Backed by experts. Fuel your body with confidence.
+          </p>
+          <menu class="socialLinks d-flex align-items-center gap-7 flex-wrap">
+            <li>
+              <button type="button" class="btn btn-rounded">
+                <a href="#!">
+                  <i class="fa-brands fa-facebook-f"></i>
+                </a>
+              </button>
+            </li>
+            <li>
+              <button type="button" class="btn btn-rounded">
+                <a href="#!">
+                  <i class="fa-brands fa-twitter"></i>
+                </a>
+              </button>
+            </li>
+            <li>
+              <button type="button" class="btn btn-rounded">
+                <a href="#!">
+                  <i class="fa-brands fa-instagram"></i>
+                </a>
+              </button>
+            </li>
+            <li>
+              <button type="button" class="btn btn-rounded">
+                <a href="#!">
+                  <i class="fa-brands fa-tiktok"></i>
+                </a>
+              </button>
+            </li>
+          </menu>
+        </div>
+        <div class="footerLinks">
+          <h3>Quick Links</h3>
+          <ul class="d-flex flex-col gap-10">
+            <li><a href="index.html#hero">Home</a></li>
+            <li><a href="index.html#about">About us </a></li>
+            <li><a href="index.html#features">Why Zemovit</a></li>
+            <li><a href="index.html#faq"> faq </a></li>
+          </ul>
+        </div>
+        <div class="footerLinks">
+          <h3>Contact Us</h3>
+          <ul class="d-flex flex-col gap-10">
+            <li>
+              <a
+                href="mailto:info@physio.com"
+                class="d-flex align-items-center gap-3"
+              >
+                <i class="fa-light fa-envelope"></i>
+                info@physio.com
+              </a>
+            </li>
+            <li>
+              <a
+                href="tel:+966500000000"
+                class="d-flex align-items-center gap-3"
+              >
+                <i class="fa-light fa-phone"></i>
+                +966 50 000 0000
+              </a>
+            </li>
+            <li>
+              <a
+                href="tel:+966500000001"
+                class="d-flex align-items-center gap-3"
+              >
+                <i class="fa-light fa-phone"></i>
+                +966 50 000 0001
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="copyRight border-t-1 border-t-solid">
+        <p>All Rights Reserved © 2025 Zemovit</p>
+      </div>
+    </footer>
+
+    <!-- (((((((((script))))))))) -->
+    <!--=======GSAP CDN=======-->
+    <script
+      type="text/javascript"
+      src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"
+    ></script>
+    <!--=======ScrollTrigger CDN=======-->
+    <script
+      type="text/javascript"
+      src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"
+    ></script>
+    <!-- SplitText -->
+    <script src="js/SplitText.min.js"></script>
+    <!-- lenis -->
+    <script src="https://cdn.jsdelivr.net/npm/@studio-freight/lenis@latest/dist/lenis.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script>
+      const swiper = new Swiper(".productSwiper", {
+        effect: "coverflow",
+        // grabCursor: true,
+        centeredSlides: true,
+        slidesPerView: "auto",
+        loop: true,
+        autoplay: {
+          delay: 3000,
+          disableOnInteraction: false,
+        },
+        coverflowEffect: {
+          rotate: 0,
+          stretch: 0,
+          depth: 200,
+          modifier: 2.5,
+          slideShadows: false,
+        },
+        on: {
+          slideChange: function () {
+            updateCaption();
+          },
+          init: function () {
+            updateCaption();
+          },
+        },
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+        },
+      });
+
+      function updateCaption() {
+        const captionEl = document.getElementById("sliderCaption");
+        const activeSlide = document.querySelector(".swiper-slide-active");
+        if (activeSlide) {
+          const title = activeSlide.getAttribute("data-title");
+          captionEl.textContent = title;
+        }
+      }
+    </script>
+
+    <!-- custom -->
+    <script src="js/main.js?=v3"></script>
+    <!-- Swiper JS -->
+    <script></script>
+  </body>
+</html>

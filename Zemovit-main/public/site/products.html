@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <link rel="shortcut icon" href="img/fav.svg" type="image/x-icon"/>
+    <title>Zemovit</title>
+    <!-- fontawesome -->
+    <link rel="stylesheet" href="css/fontawesome.min.css"/>
+    <!-- custom -->
+    <link rel="stylesheet" href="css/style.css?=v6"/>
+    <!-- Swiper CSS -->
+    <link
+        rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+</head>
+
+<body>
+<div class="preLoader">
+    <!-- preLoaderImage -->
+    <figure class="Loading"></figure>
+</div>
+<!-- header -->
+<header>
+    <div class="container">
+        <nav class="d-flex items-center justify-between py-10  px-9">
+            <!-- logo -->
+            <a href="#" class="w-80 ps-10">
+                <img src="img/logo.svg" alt="logo"/>
+            </a>
+            <!-- list -->
+            <ul
+                class="list d-flex lg:items-center border-none lg:relative m-0 gap-14 lg-max:flex-col lg-max:pt-14 lg-max:w-140 lg-max:max-w-full lg-max:h-screen"
+                id="mobileList"
+                popover=""
+            >
+                <!-- close Menu -->
+                <button
+                    type="button"
+                    class="btn btn-rounded btn-icon lg:d-none mx-6"
+                    popovertarget="mobileList"
+                    popovertargetaction="hide"
+                    id="closeMenu"
+                >
+                    <i class="fa-light fa-xmark"></i>
+                </button>
+                <!--  -->
+                <li><a href="index.html#Hero">Home</a></li>
+                <li>
+                    <a href="about.html">About Us</a>
+                </li>
+                <li>
+                    <a href="index.html#Therapeutic">Therapeutic area</a>
+                </li>
+
+                <li>
+                    <a href="products.html">All Products</a>
+                </li>
+                <li><a href="contactus.html">faq/Contact Us</a></li>
+                <!-- <li class="lg:d-none">
+                  <button class="btn btn-rounded">
+                    <a href="index.html#contact">Contact Us</a>
+                  </button>
+                </li> -->
+            </ul>
+            <!-- open menu -->
+            <menu class="d-flex items-center gap-8">
+                <!-- <li class="lg-max:d-none">
+                  <button class="btn btn-rounded">
+                    <a href="index.html#contact">Contact Us</a>
+                  </button>
+                </li> -->
+                <li class="lg:d-none">
+                    <button
+                        class="btn btn-rounded isBorder btn-icon"
+                        popovertarget="mobileList"
+                        popovertargetaction="show"
+                        id="openMenu"
+                    >
+                        <i class="fa-regular fa-bars"></i>
+                    </button>
+                </li>
+            </menu>
+        </nav>
+    </div>
+</header>
+<!-- ===================================
+ ==================start page content========================
+ ============================================================ -->
+<main>
+    <div class="container">
+        <div class="products-page">
+            <!-- Sidebar with categories -->
+            <aside class="sidebar">
+                <h3>Therapeutic Area</h3>
+                <ul class="categories-list">
+                    <li>
+                        <a href="#" class="active" data-category="All">All Products</a>
+                    </li>
+                    <li>
+                        <a href="#" data-category="ENERGY & METABOLISM"
+                        >ENERGY & METABOLISM</a
+                        >
+                    </li>
+                    <li>
+                        <a href="#" data-category="DAILY ESSENTIALS"
+                        >DAILY ESSENTIALS</a
+                        >
+                    </li>
+                    <li>
+                        <a href="#" data-category="PREGNANCY & FERTILITY"
+                        >PREGNANCY & FERTILITY</a
+                        >
+                    </li>
+                    <li>
+                        <a href="#" data-category="CHILD & ADOLESCENCE WELLNESS"
+                        >CHILD & ADOLESCENCE WELLNESS</a
+                        >
+                    </li>
+                    <li><a href="#" data-category="BONE & JOINT">BONE & JOINT</a></li>
+                    <li>
+                        <a href="#" data-category="IMMUNITY SUPPORT"
+                        >IMMUNITY SUPPORT</a
+                        >
+                    </li>
+                </ul>
+            </aside>
+
+            <!-- Products Grid -->
+            <div class="products-grid">
+                <div class="products-header">
+                    <h2>All Products</h2>
+                    <p>Browse our complete range of high-quality supplements</p>
+                </div>
+
+                <div class="products-container">
+                    <!-- Product Card 1 -->
+                    <div class="product-card" data-category="ENERGY & METABOLISM">
+                        <img src="img/p1.jpeg" alt="Zinc Sulphate"/>
+                        <div class="product-card-content">
+                            <h3>ZINC SULPHATE 50mg</h3>
+                            <p>
+                                High-quality zinc supplement for ENERGY & METABOLISM and
+                                metabolic balance.
+                            </p>
+                            <a href="product-details.html" class="btn">View Details</a>
+                        </div>
+                    </div>
+
+                    <!-- Product Card 2 -->
+                    <div class="product-card" data-category="Bone & Joint">
+                        <img src="img/p2.jpeg" alt="Vitamin D"/>
+                        <div class="product-card-content">
+                            <h3>VITAMIN D3 1000IU</h3>
+                            <p>Essential vitamin for bone health and immune function.</p>
+                            <a href="product-details.html" class="btn">View Details</a>
+                        </div>
+                    </div>
+
+                    <!-- Product Card 3 -->
+                    <div class="product-card" data-category="PREGNANCY & FERTILITY">
+                        <img src="img/p3.jpeg" alt="Magnesium"/>
+                        <div class="product-card-content">
+                            <h3>MAGNESIUM CITRATE</h3>
+                            <p>Supports muscle relaxation and nerve function.</p>
+                            <a href="product-details.html" class="btn">View Details</a>
+                        </div>
+                    </div>
+
+                    <!-- Product Card 4 -->
+                    <div
+                        class="product-card"
+                        data-category="CHILD & ADOLESCENCE WELLNESS"
+                    >
+                        <img src="img/p4.jpeg" alt="Probiotic"/>
+                        <div class="product-card-content">
+                            <h3>PROBIOTIC COMPLEX</h3>
+                            <p>Promotes gut health and digestive balance.</p>
+                            <a href="product-details.html" class="btn">View Details</a>
+                        </div>
+                    </div>
+
+                    <!-- Product Card 5 -->
+                    <div class="product-card" data-category="BONE & JOINT">
+                        <img src="img/p5.jpeg" alt="Omega 3"/>
+                        <div class="product-card-content">
+                            <h3>OMEGA 3 FISH OIL</h3>
+                            <p>Supports heart, brain and joint health.</p>
+                            <a href="product-details.html" class="btn">View Details</a>
+                        </div>
+                    </div>
+
+                    <!-- Product Card 6 -->
+                    <div class="product-card" data-category="DAILY ESSENTIALS">
+                        <img src="img/p6.jpg" alt="Vitamin C"/>
+                        <div class="product-card-content">
+                            <h3>VITAMIN C 1000mg</h3>
+                            <p>Powerful antioxidant for ENERGY & METABOLISM.</p>
+                            <a href="product-details.html" class="btn">View Details</a>
+                        </div>
+                    </div>
+                    <!-- Product Card 7 -->
+                    <div class="product-card" data-category="Bone & Joint">
+                        <img src="img/p7.jpg" alt="Vitamin D"/>
+                        <div class="product-card-content">
+                            <h3>VITAMIN D3 1000IU</h3>
+                            <p>Essential vitamin for bone health and immune function.</p>
+                            <a href="product-details.html" class="btn">View Details</a>
+                        </div>
+                    </div>
+                    <!-- Product Card 7 -->
+                    <div class="product-card" data-category="IMMUNITY SUPPORT">
+                        <img src="img/p8.jpg" alt="Vitamin D"/>
+                        <div class="product-card-content">
+                            <h3>VITAMIN D3 1000IU</h3>
+                            <p>Essential vitamin for bone health and immune function.</p>
+                            <a href="product-details.html" class="btn">View Details</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
+<!-- ===================================
+ ==================end page content========================
+ ============================================================ -->
+<!-- footer -->
+<footer>
+    <div class="container d-grid lg:grid-col-3 md:grid-col-2 grid-col-1">
+        <div class="footerMeta">
+            <figure class="w-140">
+                <img src="img/logoW.svg?=v3" alt="الشعار" loading="lazy"/>
+            </figure>
+            <p class="line-relaxed my-9">
+                Clean. Effective. Backed by experts. Fuel your body with confidence.
+            </p>
+            <menu class="socialLinks d-flex align-items-center gap-7 flex-wrap">
+                <li>
+                    <button type="button" class="btn btn-rounded">
+                        <a href="#!">
+                            <i class="fa-brands fa-facebook-f"></i>
+                        </a>
+                    </button>
+                </li>
+                <li>
+                    <button type="button" class="btn btn-rounded">
+                        <a href="#!">
+                            <i class="fa-brands fa-twitter"></i>
+                        </a>
+                    </button>
+                </li>
+                <li>
+                    <button type="button" class="btn btn-rounded">
+                        <a href="#!">
+                            <i class="fa-brands fa-instagram"></i>
+                        </a>
+                    </button>
+                </li>
+                <li>
+                    <button type="button" class="btn btn-rounded">
+                        <a href="#!">
+                            <i class="fa-brands fa-tiktok"></i>
+                        </a>
+                    </button>
+                </li>
+            </menu>
+        </div>
+        <div class="footerLinks">
+            <h3>Quick Links</h3>
+            <ul class="d-flex flex-col gap-10">
+                <li><a href="index.html#hero">Home</a></li>
+                <li><a href="index.html#about">About us </a></li>
+                <li><a href="index.html#features">Why Zemovit</a></li>
+                <li><a href="index.html#faq"> faq </a></li>
+            </ul>
+        </div>
+        <div class="footerLinks">
+            <h3>Contact Us</h3>
+            <ul class="d-flex flex-col gap-10">
+                <li>
+                    <a
+                        href="mailto:info@physio.com"
+                        class="d-flex align-items-center gap-3"
+                    >
+                        <i class="fa-light fa-envelope"></i>
+                        info@physio.com
+                    </a>
+                </li>
+                <li>
+                    <a
+                        href="tel:+966500000000"
+                        class="d-flex align-items-center gap-3"
+                    >
+                        <i class="fa-light fa-phone"></i>
+                        +966 50 000 0000
+                    </a>
+                </li>
+                <li>
+                    <a
+                        href="tel:+966500000001"
+                        class="d-flex align-items-center gap-3"
+                    >
+                        <i class="fa-light fa-phone"></i>
+                        +966 50 000 0001
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="copyRight border-t-1 border-t-solid">
+        <p>All Rights Reserved © 2025 Zemovit</p>
+    </div>
+</footer>
+
+<!-- (((((((((script))))))))) -->
+<!--=======GSAP CDN=======-->
+<script
+    type="text/javascript"
+    src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"
+></script>
+<!--=======ScrollTrigger CDN=======-->
+<script
+    type="text/javascript"
+    src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"
+></script>
+<!-- SplitText -->
+<script src="js/SplitText.min.js"></script>
+<!-- lenis -->
+<script src="https://cdn.jsdelivr.net/npm/@studio-freight/lenis@latest/dist/lenis.min.js"></script>
+<!-- custom -->
+<script src="js/main.js?=v3"></script>
+<!-- Swiper JS -->
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        const categoryLinks = document.querySelectorAll(".categories-list a");
+        const productCards = document.querySelectorAll(".product-card");
+        const header = document.querySelector(".products-header h2");
+
+        categoryLinks.forEach((link) => {
+            link.addEventListener("click", function (e) {
+                e.preventDefault();
+
+                // فعّل الفئة الحالية فقط
+                categoryLinks.forEach((l) => l.classList.remove("active"));
+                this.classList.add("active");
+
+                const selectedCategory = this.dataset.category;
+                header.textContent =
+                    selectedCategory === "All" ? "All Products" : selectedCategory;
+
+                productCards.forEach((card) => {
+                    const cardCategory = card.dataset.category;
+                    if (
+                        selectedCategory === "All" ||
+                        cardCategory === selectedCategory
+                    ) {
+                        card.style.display = "block";
+                    } else {
+                        card.style.display = "none";
+                    }
+                });
+            });
+        });
+    });
+</script>
+</body>
+</html>
