@@ -1487,8 +1487,10 @@ html.lenis body {
 
 .product-card img {
   width: 100%;
-  height: 200px;
-  object-fit: cover;
+  aspect-ratio: 4 / 3;
+  height: auto;
+  object-fit: contain;
+  background: #fff;
 }
 
 .product-card-content {

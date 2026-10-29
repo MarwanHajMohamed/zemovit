@@ -26,6 +26,12 @@ use Intervention\Image\ImageManagerStatic as Image;
             if (in_array($image->extension(),$allowedExtensions)) {
                 $fileName .= '.webp';
                 $img = Image::make($image);
+                // Product photos are shown small (cards) and at ~400px (detail page); huge originals look jagged when shrunk
+                $maxWidth = str_contains($path, 'Product/') ? 900 : 1600;
+                $img->resize($maxWidth, null, function ($constraint) {
+                    $constraint->aspectRatio();
+                    $constraint->upsize();
+                });
                 $img->encode('webp', $quality_ratio)->save($destinationPath . '/' . $fileName);
                 return $path . $fileName;
 
