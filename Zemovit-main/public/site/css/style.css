@@ -1819,3 +1819,37 @@ html.lenis body {
     }
   }
 }
+
+/* Products search */
+.products-search {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 25px;
+}
+
+.products-search input[type="search"] {
+  flex: 1 1 220px;
+  padding: 12px 16px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  font-size: 15px;
+  font-family: inherit;
+}
+
+.products-search .btn {
+  border: 0;
+  cursor: pointer;
+}
+
+.products-search-clear {
+  font-size: 14px;
+  color: #666;
+  text-decoration: underline;
+}
+
+.products-empty {
+  color: #666;
+  padding: 20px 0;
+}

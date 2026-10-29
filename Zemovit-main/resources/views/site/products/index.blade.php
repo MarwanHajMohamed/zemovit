@@ -11,13 +11,13 @@
                 <h3>{{__('site.therapeutic')}}</h3>
                 <ul class="categories-list">
                     <li>
-                        <a href="{{ route('site.products') }}" class="{{ $currentCategory === 'All' ? 'active' : '' }}" data-category="All">
+                        <a href="{{ route('site.products', array_filter(['q' => $search])) }}" class="{{ $currentCategory === 'All' ? 'active' : '' }}" data-category="All">
                             {{$product_section->title ?? 'All Products' }}
                            </a>
                        </li>
                        @foreach($categories as $category)
                            <li>
-                               <a href="{{ route('site.products', ['category' => $category->slug ]) }}"
+                               <a href="{{ route('site.products', array_filter(['category' => $category->slug, 'q' => $search])) }}"
                                class="{{ $currentCategory === $category->slug ? 'active' : '' }}"
                                data-category="{{ $category->title }}">
                                 {{ $category->title .' '. $category->title2}}
@@ -36,6 +36,21 @@
 
                     </p>
                 </div>
+
+                <form method="GET" action="{{ route('site.products') }}" class="products-search" role="search">
+                    @if($currentCategory !== 'All')
+                        <input type="hidden" name="category" value="{{ $currentCategory }}">
+                    @endif
+                    <input type="search" name="q" value="{{ $search }}" placeholder="{{ __('site.search_products') }}" aria-label="{{ __('site.search_products') }}">
+                    <button type="submit" class="btn">{{ __('site.search') }}</button>
+                    @if($search !== '')
+                        <a href="{{ route('site.products', $currentCategory !== 'All' ? ['category' => $currentCategory] : []) }}" class="products-search-clear">{{ __('site.clear_search') }}</a>
+                    @endif
+                </form>
+
+                @if($products->isEmpty())
+                    <p class="products-empty">{{ __('site.no_products_found') }}</p>
+                @endif
 
                 <div class="products-container">
                     @foreach($products as $product)

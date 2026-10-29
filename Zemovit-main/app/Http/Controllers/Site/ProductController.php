@@ -26,7 +26,22 @@ class ProductController extends Controller
                 });
             });
         }
-        $products = $query->get();
+        $search = trim((string) $request->query('q', ''));
+        if ($search !== '') {
+            $like = '%' . addcslashes($search, '\\%_') . '%';
+            $query->whereHas('translations', function ($q) use ($like, $locale) {
+                $q->where('locale', $locale)
+                    ->where(function ($q) use ($like) {
+                        $q->where('title', 'like', $like)
+                            ->orWhere('description', 'like', $like);
+                    });
+            });
+        }
+        $products = $query->with(['translations' => function ($q) use ($locale) {
+            $q->where('locale', $locale);
+        }])->get()
+            ->sortBy(fn ($product) => mb_strtolower((string) optional($product->translations->first())->title), SORT_NATURAL)
+            ->values();
         $categories = TherapeuticArea::with([
             'translations' => function($q) use ($locale) {
                 $q->where('locale', $locale);
@@ -37,7 +52,8 @@ class ProductController extends Controller
         return view('site.products.index', [
             'products' => $products,
             'categories' => $categories,
-            'currentCategory' => $category
+            'currentCategory' => $category,
+            'search' => $search
         ]);
     }
     public function show(Request $request, $slug,PageNameService $pageNameService)
