@@ -37,19 +37,25 @@
                     </p>
                 </div>
 
+                <?php
+                    // Falls back to built-in text if the language file on the server is out of date
+                    $tr = fn ($key, $en, $ar) => \Illuminate\Support\Facades\Lang::has("site.$key")
+                        ? __("site.$key")
+                        : (app()->getLocale() === 'ar' ? $ar : $en);
+                ?>
                 <form method="GET" action="{{ route('site.products') }}" class="products-search" role="search">
                     @if($currentCategory !== 'All')
                         <input type="hidden" name="category" value="{{ $currentCategory }}">
                     @endif
-                    <input type="search" name="q" value="{{ $search }}" placeholder="{{ __('site.search_products') }}" aria-label="{{ __('site.search_products') }}">
-                    <button type="submit" class="btn">{{ __('site.search') }}</button>
+                    <input type="search" name="q" value="{{ $search }}" placeholder="{{ $tr('search_products', 'Search products...', 'ابحث عن المنتجات...') }}" aria-label="{{ $tr('search_products', 'Search products...', 'ابحث عن المنتجات...') }}">
+                    <button type="submit" class="btn">{{ $tr('search', 'Search', 'بحث') }}</button>
                     @if($search !== '')
-                        <a href="{{ route('site.products', $currentCategory !== 'All' ? ['category' => $currentCategory] : []) }}" class="products-search-clear">{{ __('site.clear_search') }}</a>
+                        <a href="{{ route('site.products', $currentCategory !== 'All' ? ['category' => $currentCategory] : []) }}" class="products-search-clear">{{ $tr('clear_search', 'Clear search', 'مسح البحث') }}</a>
                     @endif
                 </form>
 
                 @if($products->isEmpty())
-                    <p class="products-empty">{{ __('site.no_products_found') }}</p>
+                    <p class="products-empty">{{ $tr('no_products_found', 'No products found.', 'لم يتم العثور على منتجات.') }}</p>
                 @endif
 
                 <div class="products-container">
