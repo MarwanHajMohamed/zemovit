@@ -1839,8 +1839,19 @@ html.lenis body {
 }
 
 .products-search .btn {
+  display: inline-block;
+  padding: 12px 22px;
+  background: var(--mainColor);
+  color: #fff;
   border: 0;
+  border-radius: 6px;
+  font-size: 15px;
+  font-family: inherit;
   cursor: pointer;
+}
+
+.products-search .btn:hover {
+  opacity: 0.8;
 }
 
 .products-search-clear {
